@@ -84,7 +84,7 @@ const LoginForm = () => {
               </div>
             <div className='base-text'>
               <div>
-              <p className='forget-pwd'>Forgot Password?</p></div>
+              <p ><Link to="/ForgotPassword" className='forget-pwd'> Forgot Password? </Link> </p></div>
               <div>
               <p className="acc-text">Don't have an account?<Link to="/" className='sign-text'> SignUp</Link></p></div>
             </div> 

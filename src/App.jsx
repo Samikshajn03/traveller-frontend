@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
+import ForgotPassword from './pages/ForgotPassword';
 
 const App = () => {
   return (
@@ -10,6 +11,7 @@ const App = () => {
         <Routes>
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<SignUp />} />
+          <Route path="/Forgotpassword" element={<ForgotPassword />} />
         </Routes>
       </div>
     </Router>

@@ -90,13 +90,13 @@ input::placeholder{
     background-color: #F1F1F1;
     color:black;
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 500;
     border-radius: 7px;
     @media (max-width:1200px){
         width:17em;
       }
       @media (max-width:800px){
-        width:9em;
+        width:15em;
       }
 
 }
