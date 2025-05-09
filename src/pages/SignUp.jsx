@@ -1,21 +1,23 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FaUser, FaRegEnvelope, FaLock, FaRegEye } from 'react-icons/fa';
 import '/src/styles/Signup.scss';
 
 
 const SignUpForm = () => {
-  const [name, setName] = useState('');
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
   const [success, setSuccess] = useState('');
+  const [loading, setLoading]= useState(false);
+  const navigate = useNavigate();
 
-  const signupApi = import.meta.env.VITE_API_SIGNUP;
+  const signupApi = 'http://localhost:3000/signup';
 
   const signup = async (e) => {
-    e.preventDefault(); // Prevent the default form submission
+    e.preventDefault(); 
 
     if (password !== confirmPassword) {
       setError('Passwords do not match.');
@@ -28,20 +30,26 @@ const SignUpForm = () => {
         headers: {
           'Content-Type': 'application/json',
         },
-        body: JSON.stringify({ name, email, password }),
+        body: JSON.stringify({ username,email, password }),
       });
 
       if (!response.ok) {
-        throw new Error('Signup failed. Please try again.');
+        const errorData = await response.json();
+  console.log('Error Response:', errorData);
+        setError(error.message || 'Signup failed. Please try again.');
+        return;
       }
 
-      const data = await response.json(); // Await the response.json()
-      setSuccess('Signup successful!'); 
-      setName('');
+      const data = await response.json(); 
+      setSuccess('Signup successfull, Check mail for verification message'); 
+      setUsername('');
       setEmail('');
       setPassword('');
       setConfirmPassword('');
-      setError(''); // Clear any previous errors
+      setError('');  
+    
+      navigate(`/email-verify/${encodeURIComponent(username)}`, { state: { email } });
+      
     } catch (err) {
       setError(err.message);
     }
@@ -57,15 +65,14 @@ const SignUpForm = () => {
             <p className="signup-text">SIGN UP</p>
             <form className="details-fields" onSubmit={signup}>
               {error && <p style={{ color: 'red' }}>{error}</p>}
-              {success && <p style={{ color: 'green' }}>{success}</p>}
               <div className="name-field">
                 <FaUser style={{ marginRight: '8px', color: 'black' }} />
                 <input
                   type="text"
-                  value={name}
+                  value={username}
                   className="input-field"
                   placeholder="User Name"
-                  onChange={(e) => setName(e.target.value)}
+                  onChange={(e) => setUsername(e.target.value)}
                   required
                 />
               </div>
@@ -102,7 +109,7 @@ const SignUpForm = () => {
                   required
                 />
               </div>
-              <button type="submit" className="signup-btn">Sign Up</button>
+              <button type="submit" className="signup-btn">Signup</button>
             </form>
             <p className="acc-text">Already have an account ?<Link to="/login" className='log-text'> Login</Link></p>
           </div>

@@ -1,0 +1,188 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 60%;
+      background: linear-gradient(to bottom, #8BEFFF, #7B6EF5);
+      z-index: -1; // Make sure the background stays behind the content
+    }
+  
+    .color-container {
+      background: white;
+      padding: 2rem;
+      border-radius: 20px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 600px;
+      height: 400px;
+      gap: 2rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  
+  
+      .profileInfoContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+  
+      .profileImageContainer {
+        margin-top: -120px;
+        position: relative;
+  
+        .profileImage {
+          width: 170px;
+          height: 170px;
+          border-radius: 50%;
+          object-fit: cover;
+          margin: 0 auto;
+          border: 5px solid white;
+        }
+  
+        .uploadButton {
+          background-color: #4caf50;
+          padding: 10px;
+          border-radius: 50%;
+          cursor: pointer;
+          position: absolute;
+          bottom: 5px;
+          right: 5px;
+        }
+      }
+  
+      .profileDetails {
+        margin-top: 1rem;
+  
+        p {
+          margin: 0.5rem 0;
+        }
+  
+        .profile-name {
+          font-size: 1.3rem;
+          font-weight: bold;
+          color: #000000;
+        }
+  
+        .profile-email {
+          font-size: 1.3rem;
+          color: #000000;
+        }
+      }
+
+  
+  .uploadButton {
+    background-color: #4CAF50;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+  }
+  
+  .profileDetails {
+    text-align: center;
+  }
+  
+  .modalOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modalContainer {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+  }
+  
+  .inputContainer {
+    margin-bottom: 10px;
+  }
+  
+  .input {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .fileInput {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+  }
+  
+  .submitButton {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .closeButton {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+  
+  .logoutButton {
+    padding: 10px 40px;
+    background: linear-gradient(to bottom, #8BEFFF, #7B6EF5);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: 600;
+    width: 170px;
+  }
+  .downloadButton{
+    padding: 10px 20px;
+    color:white ;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    font-weight: 600;
+    width: 200px;
+    background: linear-gradient(to bottom, #8BEFFF, #7B6EF5);
+  }

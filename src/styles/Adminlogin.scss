@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.whole-container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    height: 420px;
+    width: 400px;
+
+    .heading{
+        color: rgb(14, 14, 138);
+    }
+    .email,.password,.admin-key{
+        border-radius: 20px;
+        width: 60%;
+        padding: 15px;
+    }
+    .loginbtn{
+        outline: none;
+        border: none;
+        border-radius: 20px;
+        width: 30%;
+        padding: 10px;
+        color:#fff ;
+        background-color: rgb(14, 14, 138);
+        font-weight: 600;
+        font-size: 1rem;
+    }
+}

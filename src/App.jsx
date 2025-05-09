@@ -1,8 +1,15 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './pages/Login';
 import SignUp from './pages/SignUp';
 import ForgotPassword from './pages/ForgotPassword';
+import EmailVerify from './pages/EmailVerify';
+import HomePage from './pages/HomePage.jsx';
+import UserData from './pages/UserData.jsx';
+import GoogleMap from './pages/GoogleMap.jsx';
+import PrivateRoute from './Components/PrivateRoute'; 
+import Adminlogin from './pages/Adminlogin'; 
+import AdminDashboard from './pages/AdminDashboard.jsx';
 
 const App = () => {
   return (
@@ -12,6 +19,21 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/" element={<SignUp />} />
           <Route path="/Forgotpassword" element={<ForgotPassword />} />
+          <Route path="/email-verify/:username" element={<EmailVerify />} />
+          <Route path="/Adminlogin" element={<Adminlogin />} />
+          <Route path="/admin/dashboard" element={<AdminDashboard />} />
+          <Route 
+            path="/HomePage/:userId" 
+            element={<PrivateRoute element={<HomePage />} />} 
+          />
+          <Route 
+            path="/UserData/:username" 
+            element={<PrivateRoute element={<UserData />} />} 
+          />
+          <Route 
+            path="/map/:username" 
+            element={<PrivateRoute element={<GoogleMap />} />} 
+          />
         </Routes>
       </div>
     </Router>

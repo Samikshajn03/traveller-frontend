@@ -11,11 +11,11 @@ function Forgot(){
         <div className="forgot-main-container">
             <div className="forgot-whole-container">
                 <div className="forgot-image-container">
-                    <div className="heading">
+                <div className="heading">
                         WanderWise
                     </div>
                     <div className="image-section">
-                        <img src="forgot-pwd.svg" className="forgot-img"/>
+                        <img src="forgot-pwd.png" className="forgot-img"/>
                     </div>
                 </div>
                 <div className="forgot-textual-container">

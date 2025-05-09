@@ -1,0 +1,57 @@
+.add-textbox-container {
+  display: flex;
+  flex-direction: row;    
+  align-items: center;    
+  margin: 10px;  
+  width: 100%;   
+  flex-wrap: wrap;  
+
+  .textboxes {
+    display: flex;
+    flex-direction: row-reverse;  
+    gap: 10px; 
+    padding: 10px;
+    border-radius: 20%;
+    cursor: pointer; 
+     
+    max-width: 100%;
+  }
+
+  .textbox-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .textbox-container input {
+    padding: 10px;
+    height: 150px; 
+    width: 100%; 
+    max-width: 150px;
+    border-radius: 20%;
+    font-size: 14px; 
+    background-color: #FFFFFF; 
+    outline: none;
+    box-sizing: border-box;
+    color: #060606;
+    text-align: center; 
+  }
+
+  .textbox-container input::placeholder {
+    color: #9c9999;  
+    text-align: center; 
+  }
+
+  .add-button {
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF;
+    color: rgb(168, 166, 166);
+    border-radius: 20%;
+    cursor: pointer;
+    font-size: 24px;
+    margin-left: 10px;  
+  }
+}

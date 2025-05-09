@@ -16,7 +16,7 @@ body{
 .forgot-whole-container{
     display: flex;
     flex-direction: row;
-    height: 43em;
+    height: 40em;
   width: 100%; 
   max-width: 1200px; 
   margin: 0 auto; 
@@ -24,9 +24,6 @@ body{
   border-radius: 17px;
   @media (max-width:1200px){
     width: 90%; 
-  }
-  @media (max-width:700px){
-    width: 100%; 
   }
 }
 .forgot-image-container{
@@ -42,7 +39,7 @@ body{
     }
 }
 .forgot-img{
-    height: 90%;
+    height: 80%;
     width: 100%;
     @media(max-width:1000px){
         margin-top: 20%;
@@ -55,15 +52,16 @@ body{
 .forgot-textual-container{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     width: 50%;
     background-color: white;
     border-radius: 0 17px 17px 0;
+    gap:1.7em;
     @media (max-width:700px){
         width: 100%;
         border-radius:17px;
-        padding: 2.4em;
+        padding: 4em;
       } 
 }
 .forgot-pwd-heading{
@@ -74,7 +72,7 @@ body{
         font-size: 1.7em;
     }
     @media(max-width:700px){
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
 }
 .email-text{
@@ -87,7 +85,7 @@ body{
         font-size:0.9em ;
     }
     @media(max-width:700px){
-        font-size: 0.8em;
+        font-size: 0.6em;
     }
 }
 label,input {
@@ -113,25 +111,25 @@ input{
     padding: 1em;
 }
 input::placeholder{
-    color: #0e0e0e;
+    color: #555454;
     font-weight: 500;
 }
 .request-link-btn{
     all: unset;
     background-color: #2955B6;
     cursor: pointer;
-    padding: 0.3em 2.2em 0.3em 2.2em;
+    padding: 0.3em 2.1em 0.3em 2.1em;
     border-radius: 10px;
     color: #FFFFFF;
-    font-weight: 600;
-    font-size: 1.8em;
+    font-weight: 500;
+    font-size: 1.3em;
     @media(max-width:1200px){
         padding: 0.4em 2.1em 0.4em 2.1em;
         font-size: 1.1em;
     }
     @media(max-width:700px){
         padding: 0.4em 2em 0.4em 2em;
-        font-size: 1.1em;
+        font-size: 1em;
     }
 }
 .or-line{
